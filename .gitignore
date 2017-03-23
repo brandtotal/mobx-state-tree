@@ -1,6 +1,5 @@
 node_modules
 *.log
-lib
 test-lib
 coverage
 .nyc_output
