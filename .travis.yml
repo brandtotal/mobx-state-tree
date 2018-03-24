@@ -10,7 +10,7 @@ before_install: # if "install" is overridden
   - yarn --version
 cache:
   yarn: true
-script: yarn run bootstrap && yarn run build && yarn run test && yarn run coverage
+script: yarn run bootstrap && yarn run build && git diff
 after_success:
   - cat ./packages/mobx-state-tree/coverage/lcov.info|./packages/mobx-state-tree/node_modules/coveralls/bin/coveralls.js
 node_js:
